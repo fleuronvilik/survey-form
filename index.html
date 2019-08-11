@@ -3,54 +3,65 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="How are we useful to students in their leisure time ?">
-    <title>Responsive Web Design 2</title>
+    <meta name="description" content="Students will vote and five new clubs will be created.">
+    <link href="style.css" rel="stylesheet">
+    <title>The 5 future new Clubs</title>
   </head>
   <body>
-    <h1 id="title">Students Survey</h1>
-    <p id="description">Un formulaire Web : deuxième projet pour <a href="https://freecodecamp.org">freecodecamp.org</a></p>
+    <header>
+      <h1 id="title">5 New Clubs</h1>
+      <p id="description">Help us, through your votes, to find the top 5 of this list of clubs selected by the administration. Our school will have them as new clubs.</p>
+    </header>
     <form id="survey-form">
       <section>
-        <div>
-          <fieldset>
-            <legend>Gender</legend>
-          	<label for="M"><input type="radio" id="M" name="gender" value="m">Man</label></li>
-          	<label for="W"><input type="radio" id="W" name="gender" value="f">Woman</label></li>
-          </fieldset>
-          <p><label id="name-label">Name : <input type="text" id= "name" placeholder="John Doe" required></label></p>
-          <p><label id="email-label">E-mail : <input type="email" id="email" placeholder="johndoe@gee-mail.com" required></label></p>
-          <p><label id="number-label">Age : <input type="number" id="number" placeholder="More than 13" min=13 max="20"></label></p>
-          <div>
-            <label for="dropdown">How often do you smoke ?</label>
-            <select id="dropdown">
-              <option>Heavy</option>
-              <option>Regularly</option>
-              <option>Occasionally</option>
-              <option>Never</option>
-            </select>
-          </div>
-        </div>
+        <fieldset>
+          <legend>General</legend>
+          <dl>
+            <dt><label id="name-label" for="name">Name:</label></dt>
+            <dd><input type="text" id= "name" placeholder="John Doe" required></dd>
+            <dt><label id="email-label" for="email">E-mail:</label></dt>
+            <dd><input type="email" id="email" placeholder="johndoe@gee-mail.com" required></dd>
+            <dt><label id="number-label" for="number">Grade:<label>
+            <dd><input type="number" id="number" placeholder="6-12th" min="6" max="12"></dd></dt>
+            <dt>Gender:</dt>
+            <dd>
+              <label for="M"><input type="radio" id="M" name="gender" value="m">Man</label></li>
+              <label for="W"><input type="radio" id="W" name="gender" value="f">Woman</label></li>
+            </dd>
+            <dt><label for="dropdown">How do you first hear about this survey ?</label></dt>
+            <dd>
+              <select id="dropdown">
+                <option value="blog">Our Blog</option>
+                <option value="news">Our Newsletter</option>
+                <option value="media">Social Media</option>
+                <option value="board">Board</option>
+              </select>
+            </dd>
+          </dl>
+        </fieldset>
         <fieldset>
           <legend>Clubs</legend>
-          <ul>
-            <li><label for="com"><input type="checkbox" name="clubs" id="com" value="sd"> Speech and Debate</label></li>
+          <ul id="clubs">
+            <li><label for="com"><input type="checkbox" name="clubs" id="com" value="com"> Speech and Debate</label></li>
             <li><label for="music"><input type="checkbox" name="clubs" id="music" value="music"> Choir, Band and Orchestra</label></li>
             <li><label for="red-cross"><input type="checkbox" name="clubs" id="red-cross" value="red-cross"> Red Cross</label></li>
             <li><label for="bb"><input type="checkbox" name="clubs" id="bb" value="best-buddies"> Best Buddies</label></li>
-            <li><label for="languages"><input type="checkbox" name="clubs" id="languages" value="languages"> Languages Club</label></li>
-            <li><label><input type="checkbox" name="clubs" value="nhs"> National Honors Society</label></li>
+            <li><label for="esperanto"><input type="checkbox" name="clubs" id="esperanto" value="esperanto"> Esperanto</label></li>
+            <li><label for"recycling"><input type="checkbox" name="clubs" id="recycling" value="recycling"> Recycling</label></li>
             <li><label for="stage"><input type="checkbox" name="clubs" id="stage" value="stage"> Drama/Theater</label></li>
-            <li><label for="gov"><input type="checkbox" name="clubs" id="gov" value="gov"> Student Government</label></li>
-            <li><label for="chess"><input type="checkbox" name="clubs" id="chess" value="key"> Key Club</label></li>
+            <li><label for="robotics"><input type="checkbox" name="clubs" id="robotics" value="robotics"> Robotics</label></li>
+            <li><label for="chess"><input type="checkbox" name="clubs" id="chess" value="chess"> Chess Club</label></li>
             <li><label for="dance"><input type="checkbox" name="clubs" id="dance" value="dance"> Dance Groups</label></li>
           </ul>
         </fieldset>
-        <div>
-          <label for="textarea">Additional Comments</textarea>
-          <textarea id="textarea" size="100"></textarea>
-        </div>
+        <fieldset>
+          <legend><label for="comment">Additional Comments</label></legend>
+          <textarea id="comment" size="100"></textarea>
+        </fieldset>
       </section>
-      <button id="submit" type="submit">Submit</submit>
+      <div>
+        <button id="submit" type="submit">Submit</submit>
+      </div>
     </form>
   </body>
 </html>
