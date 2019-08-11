@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin-bottom: 25px;
+  padding: 25px 0;
+  background-image: linear-gradient(to right, mediumpurple, lightpink);
+  background-color: orangered;
+  text-align: center;
+}
+
+form, h1 + p {
+  box-sizing: border-box;
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1 + p,
+form,
+input[id=name],
+input[id=email],
+input[id=number],
+select,
+textarea,
+button {
+  font-family: 'Zilla Slab', serif;
+  font-size: 20px;
+}
+
+h1 + p {padding: 0 5%;}
+
+h1 {
+  display: inline-block;
+  margin: 0 auto 25px auto;
+  padding: 5px 10px;
+  background-color: black;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+fieldset {box-sizing: border-box;}
+
+fieldset:first-of-type dl {
+  display: grid;
+  grid-gap: 10px;
+  align-items: center;
+}
+
+dd {margin: 0;}
+
+ul {
+  box-sizing: border-box;
+  padding: 0;
+  list-style-type: none;
+}
+
+textarea {
+  display: block;
+  min-height: 150px;
+  resize: none;
+}
+
+input[id=name],
+input[id=email],
+input[id=number],
+textarea,
+select {
+  box-sizing: border-box;
+  display: block;
+  padding: 5px;
+}
+
+input[id=name], input[id=email], textarea {width: 90%;}
+
+form > div {
+  margin: 25px 0;
+  text-align: center;
+}
+
+button {
+  border: 1px solid lightgray;
+  background-color: transparent;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+@media (min-width: 425px) {
+    form, h1 + p {max-width: 700px;}
+
+    fieldset:first-of-type dl {grid-template-columns: 50% 50%;}
+
+    fieldset:first-of-type dt {text-align: right;}
+
+    ul {column-count: 2;}
+
+    fieldset:last-of-type {background: transparent url("images/comment.png") no-repeat 25% center;}
+
+    input[id=name],
+    input[id=email],
+    input[id=number],
+    select {
+      width: 90%;
+      margin: 0;
+    }
+
+    textarea {
+      width: calc((90/100)*50%);
+      margin-left: calc(50% + 10px);
+    }
+}
